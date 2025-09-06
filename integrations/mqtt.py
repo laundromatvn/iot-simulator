@@ -31,7 +31,7 @@ def on_connect(client: mqtt.Client, _userdata, _flags, rc: int):
 
 
 def on_message(client: mqtt.Client, _userdata, msg: mqtt.MQTTMessage):
-    handle_incoming_message(msg)
+    handle_incoming_message(client, msg)
 
 
 def create_client() -> mqtt.Client:
